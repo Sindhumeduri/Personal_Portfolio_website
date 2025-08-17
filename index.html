@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meduri Sindhu Rathna Sri | AI/ML Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #6c63ff;
+            --secondary: #4f46e5;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-img {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .skill-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-input {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--darker);
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold gradient-text">Here's Sindhu </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#interships" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Interships</a>
+                        <a href="#blog" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Projects</a>
+                <a href="#internship" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Intership</a>
+                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Blog</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Hey It's
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">          
+                   <span class="gradient-text"> Meduri Sindhu Rathna Sri</span></h1>
+                    
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-medium mb-6 text-gray-300">Aspiring AI & ML Developer | Crafting Intelligent Solutions with Code</h2>
+                <p class="text-gray-400 mb-8 max-w-lg">Building the future with artificial intelligence and machine learning. Passionate about creating innovative solutions that make a difference.</p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="btn-primary text-white font-medium py-3 px-6 rounded-lg">Contact Me</a>
+                    <a href="#projects" class="border border-gray-700 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-800 transition">View Projects</a>
+                </div>
+                <div class="mt-12 flex justify-center md:justify-start space-x-4">
+                    <a href="https://www.linkedin.com/in/sindhu-meduri-8436042a1/" target="_blank" class="social-icon text-gray-400 hover:text-white text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sindhumeduri" target="_blank" class="social-icon text-gray-400 hover:text-white text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sindhumeduri05/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-700 hero-img">
+                    <img src="imagesin.jpg" alt="Meduri Sindhu Rathna Sri" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 opacity-20 blur-xl"></div>
+                <div class="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 opacity-20 blur-xl"></div>
+            </div>
+        </div>
+        <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-down">
+            <i class="fas fa-chevron-down text-gray-400 text-2xl animate-bounce"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">About Me</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Professional Summary</h3>
+                    <p class="text-gray-300 mb-6">
+                        Aspiring AI and ML student with practical experience in Python, SQL, and Generative AI, eager to contribute and grow in a dynamic company. Enthusiastic about applying learned skills to real-world challenges and embracing new opportunities.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Python</span>
+                                <span class="text-gray-400">Skillful</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">SQL</span>
+                                <span class="text-gray-400">Experienced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">HTML/CSS</span>
+                                <span class="text-gray-400">Experienced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Education</h3>
+                    <div class="relative timeline pl-8">
+                        <div class="relative mb-8 timeline-item">
+                            <h4 class="text-xl font-bold text-white">B.Tech in Artificial Intelligence and Machine Learning</h4>
+                            <p class="text-gray-400">Godavari Institute Of Engineering And Technology (CGPA: 8.0)</p>
+                            <p class="text-sm text-gray-500">Oct 2022 – May 2026</p>
+                        </div>
+                        <div class="relative mb-8 timeline-item">
+                            <h4 class="text-xl font-bold text-white">Intermediate</h4>
+                            <p class="text-gray-400">Sri Chaithanya Junior College (70%)</p>
+                            <p class="text-sm text-gray-500">Jun 2020 – Apr 2022</p>
+                        </div>
+                        <div class="relative mb-8 timeline-item">
+                            <h4 class="text-xl font-bold text-white">SSC</h4>
+                            <p class="text-gray-400">Holy Angels English Medium High School (95%)</p>
+                            <p class="text-sm text-gray-500">Jun 2019 – Apr 2020</p>
+                        
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Internship Section -->
+<!-- Internship Section -->
+<section id="interships" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-950">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">Interships</h2>
+        
+        <!-- Internship 1 -->
+        <div class="glass-card p-8 rounded-xl mb-8">
+            <div class="relative timeline pl-8">
+                <div class="relative timeline-item">
+                    <h4 class="text-xl font-bold text-white">Web Development Intern</h4>
+                    <p class="text-gray-400">SkillDzire</p>
+                    <p class="text-sm text-gray-500">May 2025 – Jun 2025</p>
+                    <ul class="mt-2 text-gray-300 list-disc list-inside">
+                        <li>Gained hands-on experience building responsive and user-friendly web interfaces</li>
+                        <li>Collaborated on structured tasks simulating real-world scenarios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Internship 2 -->
+        <div class="glass-card p-8 rounded-xl">
+            <div class="relative timeline pl-8">
+                <div class="relative timeline-item">
+                    <h4 class="text-xl font-bold text-white">Artificial Intelligence Intern</h4>
+                    <p class="text-gray-400">AIMER Society & APSCHE</p>
+                    <p class="text-sm text-gray-500">July 2024 – August 2024</p>
+                    <ul class="mt-2 text-gray-300 list-disc list-inside">
+                        <li>Completed an 8-week internship on Artificial Intelligence, gaining hands-on exposure to machine learning and intelligent systems</li>
+                        <li>Strengthened analytical thinking and problem-solving skills through research-driven learning under AIMER Society in collaboration with APSCHE.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-950">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">My Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 project-card">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Task Due Date Monitor" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Task Due Date Monitor</h3>
+                    <p class="text-gray-400 mb-4">An interactive assignment and task tracking system developed with Python and Streamlit, designed to help users manage deadlines efficiently. It features real-time updates, JSON-based data persistence, and an intuitive interface for seamless task management. The project also includes custom styling and background visuals to enhance usability, making it a practical and visually engaging productivity tool.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Python</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Streamlit</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">JSON</span>
+                    </div>
+                    <a href="https://task-due-date-monitor-tsjvvx2t8lnqxrapp78trp3.streamlit.app/" class="inline-flex items-center text-purple-400 hover:text-purple-300">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 project-card">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Lost and Found Grabber" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Lost and Found Grabber</h3>
+                    <p class="text-gray-400 mb-4">A secure and interactive web application built with Python and Streamlit.
+Includes user registration and login pages with role-based authentication.
+Admins can manage all reports, while users access only their own submissions.
+Ensures data persistence through JSON storage with real-time validations.
+Designed with custom backgrounds to provide a seamless user experience.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Python</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Streamlit</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Authentication</span>
+                    </div>
+                    <a href="https://lost-and-found-grabber-tn6p7apsvkfjyxdtcggqlx.streamlit.app/" class="inline-flex items-center text-purple-400 hover:text-purple-300">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 project-card">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="pic.jpg" alt="Lost and Found Grabber" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Personal Portfolio Website</h3>
+                    <p class="text-gray-400 mb-4"> Portfolio Website
+A sleek, responsive single-page portfolio built with HTML, TailwindCSS, and JavaScript, featuring a futuristic dark theme with glassmorphism, smooth animations, and interactive sections to showcase my skills, projects, and professional journey.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">HTML</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">CSS</span>
+                        
+                    </div>
+                    <a href="https://sindhumeduri.github.io/Personal_Portfolio/" class="inline-flex items-center text-purple-400 hover:text-purple-300">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 project-card">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="https://images.byword.ai/2vac1IenMwxhPCYzY2J2xM9kX9ukeGleTZvN3DEM78xia5zkA-out-0.png" alt="Emoji Translator" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Emoji Translator</h3>
+                    <p class="text-gray-400 mb-4"> An engaging Python application that translates words and phrases into emojis.
+Built using string processing and mapping techniques for accurate conversions.
+Provides a simple and intuitive interface for seamless user interaction.
+Showcases a creative approach to making communication more expressive and fun.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">Python</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">StreamLit</span>
+                        <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300">JSON</span>
+                        
+                    </div>
+                    <a href="https://emojidecoder-dlzar7xbkrpnoe9dfnnszj.streamlit.app/" class="inline-flex items-center text-purple-400 hover:text-purple-300">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">Certifications</h2>
+            <div class="glass-card p-8 rounded-xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">AIMERS: Gen-AI</h4>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">Infosys: Basic of Python</h4>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">SkillDzire: Web Development</h4>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">Oracle Professional Certified: APEX Cloud Developer</h4>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">Microsoft: Introduction to MS Excel</h4>
+
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">Oracle Professional Certified: AI Vector</h4>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition">
+                        <h4 class="font-bold text-white">AWS Cloud Computing</h4>
+                    </div>   
+                       
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">My Blog</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="http://www.marktechpost.com/wp-content/uploads/2023/04/future-artificial-intelligence-robot-network-system-background-scaled.jpg" alt="AI Future" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-purple-400">Artificial Intelligence</span>
+                    <h3 class="text-xl font-bold text-white mb-2">The Future of Generative AI</h3>
+                    <p class="text-gray-400 mb-4">Exploring how generative AI is transforming creative industries and what the future holds for this technology.</p>
+                    <a href="#" class="inline-flex items-center text-gray-300 hover:text-white">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Machine Learning" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-purple-400">Machine Learning</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Getting Started with ML Models</h3>
+                    <p class="text-gray-400 mb-4">A beginner's guide to understanding and implementing basic machine learning models in Python.</p>
+                    <a href="#" class="inline-flex items-center text-gray-300 hover:text-white">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-6 rounded-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="mb-4 h-48 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Web Development" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-purple-400">Web Development</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Modern CSS Techniques</h3>
+                    <p class="text-gray-400 mb-4">Exploring cutting-edge CSS features that can enhance your web development projects today.</p>
+                    <a href="#" class="inline-flex items-center text-gray-300 hover:text-white">
+                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary text-white font-medium py-3 px-6 rounded-lg inline-flex items-center">
+                    View All Articles <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-950 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 section-title">Get In Touch</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Contact Form</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full contact-input rounded-lg py-3 px-4 text-white focus:outline-none">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Your EMAIL</label>
+                            <input type="email" id="email" class="w-full contact-input rounded-lg py-3 px-4 text-white focus:outline-none">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full contact-input rounded-lg py-3 px-4 text-white focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary text-white font-medium py-3 px-6 rounded-lg w-full">Send Message</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Contact Information</h3>
+                    <p class="text-gray-300 mb-8">Feel free to reach out to me for collaborations, job opportunities, or just to say hello!</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gray-800 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Email</h4>
+                                <a href="mailto:sindhu@example.com" class="text-gray-400 hover:text-purple-400">sindhumeduri03@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gray-800 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Phone</h4>
+                                <a href="mailto:sindhu@example.com" class="text-gray-400 hover:text-purple-400">7075885656</a>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gray-800 p-3 rounded-lg mr-4">
+                                <i class="fas fa-location text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Location</h4>
+                                <a href="mailto:sindhu@example.com" class="text-gray-400 hover:text-purple-400">Andhra Pradesh, West Godavari, Kovvur, Indirammacolony</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-800 p-3 rounded-lg mr-4">
+                                <i class="fas fa-file-alt text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Resume</h4>
+                                <a href="c:\Users\ASUS\Downloads\sindhu_final_resume_1.pdf" class="text-gray-400 hover:text-purple-400 inline-flex items-center">
+                                    Download Resume <i class="fas fa-download ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gray-800 p-3 rounded-lg mr-4">
+                                <i class="fas fa-share-alt text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Social Media</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.linkedin.com/in/sindhu-meduri-8436042a1/" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://github.com/Sindhumeduri" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/sindhumeduri05/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 glass-card p-6 rounded-xl">
+                        <h4 class="text-lg font-bold text-white mb-4">Availability</h4>
+                        <p class="text-gray-300">I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to connect, don't hesitate to reach out!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#home" class="text-2xl font-bold gradient-text">It's Sindhu</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white">Projects</a>
+                    <a href="#interships" class="text-gray-400 hover:text-white">Interships</a>
+                    <a href="#blog" class="text-gray-400 hover:text-white">Blog</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 Meduri Sindhu Rathna Sri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Animate skill bars on scroll
+        window.addEventListener('scroll', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            const aboutSection = document.getElementById('about');
+            const aboutSectionTop = aboutSection.offsetTop;
+            const aboutSectionHeight = aboutSection.offsetHeight;
+            const scrollPosition = window.scrollY + window.innerHeight;
+            
+            if (scrollPosition > aboutSectionTop + aboutSectionHeight / 2) {
+                skillBars.forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-width') || bar.style.width;
+                });
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
